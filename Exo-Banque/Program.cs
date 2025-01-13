@@ -8,27 +8,16 @@ namespace Exo_Banque
         {
             Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-            Courant c1 = new Courant();
+            Personne p1 = new Personne("Doe", "John", new DateTime(1987, 9, 27));
+
+            Courant c1 = new Courant("BE01", p1);
             c1.LigneCredit = 200;
-            c1.Titulaire = new Personne()
-            {
-                Nom = "Doe",
-                Prenom = "Jhon",
-                DateNaiss = new DateTime(1987, 9, 27)
-            };
-            c1.Numero = "BE01";
 
-            Courant c2 = new Courant() { 
-                Numero = "BE02",
-                LigneCredit = 200,
-                Titulaire = c1.Titulaire
+            Courant c2 = new Courant("BE02", p1) {
+                LigneCredit = 200
             };
 
-            Epargne e1 = new Epargne()
-            {
-                Numero = "BE03",
-                Titulaire = c1.Titulaire
-            };
+            Epargne e1 = new Epargne("BE03", p1);
 
             Banque bank = new Banque();
 
@@ -90,7 +79,7 @@ namespace Exo_Banque
             Console.WriteLine("Quelle est la date de naissance (formatée : yyyy-mm-dd) ?");
             DateTime birth_date = DateTime.Parse(Console.ReadLine());
 
-            Personne client = new Personne() { Nom = lastname, Prenom = firstname, DateNaiss = birth_date };
+            Personne client = new Personne(lastname, firstname, birth_date);
 
             client = bank[client];
 

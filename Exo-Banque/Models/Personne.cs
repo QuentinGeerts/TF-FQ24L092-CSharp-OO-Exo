@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Exo_Banque.Models;
 
-namespace Exo_Banque.Models
+public class Personne
 {
-    public class Personne
+    public Personne(string nom, string prenom, DateTime dateNaiss)
     {
-        public string Nom { get; set; } = string.Empty;
-
-        public string Prenom { get; set; } = string.Empty;
-
-        public DateTime DateNaiss { get; set; }
+        Nom = nom;
+        Prenom = prenom;
+        DateNaiss = dateNaiss;
     }
+
+    public string Nom { get; private set; } = string.Empty;
+
+    public string Prenom { get; private set; } = string.Empty;
+
+    public DateTime DateNaiss { get; private set; }
 }
