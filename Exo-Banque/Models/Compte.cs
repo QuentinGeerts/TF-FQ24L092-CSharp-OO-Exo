@@ -20,12 +20,12 @@ public abstract class Compte : IBanker
 
     public virtual void Retrait(double montant)
     {
-        if (montant <= 0) throw new ArgumentException(nameof(montant), "Le montant doit être supérieur à 0.");
+        if (montant <= 0) throw new ArgumentOutOfRangeException(nameof(montant), "Le montant doit être supérieur à 0.");
         Solde -= montant;
     }
     public void Depot(double montant)
     {
-        if (montant <= 0) throw new ArgumentException(nameof(montant), "Le montant doit être supérieur à 0.");
+        if (montant <= 0) throw new ArgumentOutOfRangeException(nameof(montant), "Le montant doit être supérieur à 0.");
         Solde += montant;
     }
 

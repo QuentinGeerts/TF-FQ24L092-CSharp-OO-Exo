@@ -24,13 +24,14 @@ public sealed class Courant : Compte
         get { return _ligneCredit; }
         set
         {
+            if (value < 0) throw new InvalidOperationException("La ligne de crédit ne peut pas être négative.");
             _ligneCredit = double.Clamp(value, 0, double.MaxValue);
         }
     }
 
     public override void Retrait(double montant)
     {
-        if (-LigneCredit > Solde - montant) throw new Exception("Le solde depasse le montant autorisé par le crédit.");
+        if (-LigneCredit > Solde - montant) throw new SoldeInsuffisantException("Le solde depasse le montant autorisé par le crédit.");
         base.Retrait(montant);
     }
 
