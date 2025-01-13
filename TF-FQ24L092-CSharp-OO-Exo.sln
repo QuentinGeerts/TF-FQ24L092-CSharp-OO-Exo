@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-IDisposable", "Demo-ID
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Exceptions", "Demo-Exceptions\Demo-Exceptions.csproj", "{628398E2-0352-48AF-ABFB-934273E9C925}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo-Delegate1", "Demo-Delegate1\Demo-Delegate1.csproj", "{DED9261E-20C2-41A5-923E-B3166774BBFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{628398E2-0352-48AF-ABFB-934273E9C925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{628398E2-0352-48AF-ABFB-934273E9C925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{628398E2-0352-48AF-ABFB-934273E9C925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED9261E-20C2-41A5-923E-B3166774BBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED9261E-20C2-41A5-923E-B3166774BBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED9261E-20C2-41A5-923E-B3166774BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED9261E-20C2-41A5-923E-B3166774BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{2DCC4F78-D80E-443E-BE5C-8702696D9949} = {17E0D777-8214-4DBC-8088-17C80F0E4465}
 		{6764383C-67EA-499A-87A8-0AD4D0B4E2F8} = {17E0D777-8214-4DBC-8088-17C80F0E4465}
 		{628398E2-0352-48AF-ABFB-934273E9C925} = {17E0D777-8214-4DBC-8088-17C80F0E4465}
+		{DED9261E-20C2-41A5-923E-B3166774BBFA} = {17E0D777-8214-4DBC-8088-17C80F0E4465}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {303CC111-AF36-4476-BFB6-5D0739609A41}
