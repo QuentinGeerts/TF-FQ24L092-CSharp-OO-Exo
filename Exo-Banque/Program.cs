@@ -33,6 +33,9 @@ namespace Exo_Banque
 
             compteTraite.Retrait(1600);
             Console.WriteLine($"Le Solde du compte BE01 est {compteTraite.Solde} €.");
+            
+            compteTraite.Retrait(50);
+            Console.WriteLine($"Le Solde du compte BE01 est {compteTraite.Solde} €.");
 
             compteTraite = bank["BE02"];
             compteTraite.Depot(1500);

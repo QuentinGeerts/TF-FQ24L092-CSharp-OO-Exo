@@ -1,5 +1,7 @@
 ﻿namespace Exo_Banque.Models;
 
+public delegate void PassageEnNegatifDelegate(Compte c);
+
 public abstract class Compte : IBanker
 {
     protected Compte(string numero, Personne titulaire) : this(numero, titulaire, 0)
@@ -13,6 +15,8 @@ public abstract class Compte : IBanker
         Titulaire = titulaire;
         Solde = solde;
     }
+
+    public event PassageEnNegatifDelegate PassageEnNegatifEvent;
 
     public string Numero { get; private set; }
     public double Solde { get; private set; }
@@ -77,5 +81,8 @@ public abstract class Compte : IBanker
         //return double.Max(0, left) + double.Max(0, right.Solde);
     }
 
-
+    protected void PassageEnNegatif()
+    {
+        PassageEnNegatifEvent?.Invoke(this);
+    }
 }

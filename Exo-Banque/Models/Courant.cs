@@ -32,7 +32,10 @@ public sealed class Courant : Compte
     public override void Retrait(double montant)
     {
         if (-LigneCredit > Solde - montant) throw new SoldeInsuffisantException("Le solde depasse le montant autorisé par le crédit.");
+        
+        bool soldePositif = Solde > 0;
         base.Retrait(montant);
+        if (soldePositif && Solde < 0) PassageEnNegatif();
     }
 
     protected override double CalculInteret()
