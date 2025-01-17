@@ -91,7 +91,7 @@ internal class Shop
         List<Product> products = new List<Product>();
         foreach (KeyValuePair<Product, int> kvp in _products)
         {
-            if (predicate(kvp))
+            if (predicate.Invoke(kvp))
             {
                 products.Add(kvp.Key);
             }
