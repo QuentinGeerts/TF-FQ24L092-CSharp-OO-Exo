@@ -1,6 +1,6 @@
 ﻿namespace Exo_Banque.Models;
 
-public delegate void PassageEnNegatifDelegate(Compte c);
+//public delegate void PassageEnNegatifDelegate(Compte c);
 
 public abstract class Compte : IBanker
 {
@@ -16,7 +16,8 @@ public abstract class Compte : IBanker
         Solde = solde;
     }
 
-    public event PassageEnNegatifDelegate PassageEnNegatifEvent;
+    //public event PassageEnNegatifDelegate PassageEnNegatifEvent;
+    public event Action<Compte> PassageEnNegatifEvent;
 
     public string Numero { get; private set; }
     public double Solde { get; private set; }
