@@ -8,3 +8,6 @@ Voiture voiture2 = new Voiture("EF456GH");
 
 carwash.Traiter(voiture1);
 carwash.Traiter(voiture2);
+
+//carwash.Traitement?.Invoke(voiture1);
+//carwash.Traitement?.Invoke(voiture2);

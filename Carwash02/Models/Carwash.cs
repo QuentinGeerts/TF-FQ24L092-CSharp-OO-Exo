@@ -4,7 +4,7 @@ public delegate void Traitement(Voiture v);
 
 public class Carwash
 {
-    public Traitement Traitement = null;
+    private Traitement Traitement = null;
 
     public Carwash()
     {
